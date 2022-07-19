@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: create-react-app-azd-swa
+services:
+  web:
+    project: src/my-app
+    dist: build
+    language: js
+    host: staticwebapp
