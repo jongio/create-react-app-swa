@@ -1,13 +1,14 @@
+param environmentName string
 param location string
-param resourceToken string
-param tags object
+param resourceNameToken string
 
 resource web 'Microsoft.Web/staticSites@2021-03-01' = {
-  name: 'stapp-web-${resourceToken}'
+  name: 'stapp-web-${resourceNameToken}'
   location: location
-  tags: union(tags, {
-      'azd-service-name': 'web'
-    })
+  tags: {
+    'azd-env-name': environmentName
+    'azd-service-name': 'web'
+  }
   sku: {
     name: 'Free'
     tier: 'Free'
