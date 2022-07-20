@@ -17,3 +17,5 @@ resource web 'Microsoft.Web/staticSites@2021-03-01' = {
     provider: 'Custom'
   }
 }
+
+output WEB_URI string = 'https://${web.properties.defaultHostname}'

@@ -33,3 +33,5 @@ module resources './resources.bicep' = {
     resourceNameToken: resourceNameToken
   }
 }
+
+output WEB_URI string = resources.outputs.WEB_URI
